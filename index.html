@@ -11,47 +11,47 @@
     </header>
     <section>
      <form action="" method="get">
-      <!-- <fieldset>
+      <fieldset>
 
-         <!-- Dados Pessoais 
+          <!-- Dados Pessoais  -->
         <legend>Dados Pessoais </legend>
        
         <label for="userName">Nome</label>
-        <input type="text"name="userName" required> 
+        <input id="userName" type="text"name="userName" required> 
         <br>
 
-        <label for="Age">Idade</label>
-        <input type="number"name="userAge" min="12" max="100" required>
+        <label for="age">Idade</label>
+        <input id="age" type="number"name="userAge" min="12" max="100" required>
         <br>
         <label for="birthdate">Data de nascimento</label>
-        <input type="date"name="birthdate">
+        <input id="birthdate" type="date"name="userbirthdate">
         <br>
-        <label for="userEmail">Email</label>
-        <input type="email"name="userEmail" required>
+        <label for="email">Email</label>
+        <input id="email" type="email"name="userEmail" required>
          <br>
-        <label for="userPhoneNumber">Telefone</label>
-        <input type="tel"name="userPhoneNumber" pattern="[0-9]{11}" placeholder="DDD + numeros sem espaço ou hífen">
+        <label for="phoneNumber">Telefone</label>
+        <input id="phoneNumber" type="tel"name="userPhoneNumber" pattern="[0-9]{11}" placeholder="DDD + numeros sem espaço ou hífen">
 
-        <label for="UserImagen">Upload de Foto</label>
-        <input type="file"accpet="image/*" name="UserImage">
+        <label for="image">Upload de Foto</label>
+        <input id="image"type="file"accpet="image/*" name="UserImage">
         <br>
-       </fieldset> -->
+       </fieldset> 
        <fieldset>
             <legend>Perfil</legend>
             <p>Genero:</p>
-            <input type="radio" name="UserGender"value="Feminino">
-            <label for="UserGender">Feminino</label>
+            <input id="fen" type="radio" name="UserGender"value="Feminino">
+            <label for="fen">Feminino</label>
 
-            <input type="radio" name="UserGender"value="Masculino">
-            <label for="UserGender">Masculino</label>
+            <input id="masc" type="radio" name="UserGender"value="Masculino">
+            <label for="masc">Masculino</label>
 
-            <input type="radio" name="UserGender"value="NotInformed">
-            <label for="UserGender">Prefiro Não informar</label>
+            <input id="notInformed" type="radio" name="UserGender"value="notInformed">
+            <label for="notInformed">Prefiro Não informar</label>
             <br>
 
 
-            <label for="MaritalStatus">Estado Civil</label>
-            <select name="MaritalStatus" id="">
+            <label for="maritalStatus">Estado Civil</label>
+            <select name="userMaritalStatus" id="maritalStatus">
                 <option value="NotInformed">Selecione...</option>
                 <option value="casado">Casado</option>
                 <option value="solteiro">solteiro</option>
@@ -59,8 +59,8 @@
                 <option value="União Estável">União Estável</option>
             </select>
 
-            <label for="UserState">Estado</label>
-            <select name="UserState" required>
+            <label for="state">Estado</label>
+            <select name="userState" id="State" required>
 
                 <option value="acre">Acre</option>
                 <option value="alagoas">Alagoas</option>
@@ -94,7 +94,36 @@
             <label for="userCity">Cidade:</label>
             <input type="text" id="userCity" name="userCity" autocomplete="address-level2" placeholder="Ex.: Fortaleza" />
                  
-       </fieldset>
+     </fieldset>
+     <fieldset>
+        <legend>Habítos</legend>
+         <p>Redes sociais:</p>
+         <input id="instagran" type="checkbox" name="social" value="instagran">
+         <label for="instagran">Instagran</label>
+         <br>
+         <input id="facebook" type="checkbox" name="social" value="facebook">
+         <label for="facebook">Facebook</label>
+         <br>
+         <input id="linkdin" type="checkbox" name="social" value="linkdin">
+         <label for="linkdin">Linkdin</label>
+         <br>
+         <input id="x" type="checkbox" name="social" value="x">
+         <label for="x">X</label>
+         <br>
+
+         <label for="musicStyle">Estilo Musical</label>
+         <input list="styleTypes" id="musicStyle" type="text" name="userMusicStyle">
+          <datalist id="styleTypes">
+             <option value="rock">
+             <option value="pop">
+             <option value="samba">
+             <option value="sertanejo">
+          </datalist>
+          <br>
+          <label for="favoritColor"> Cor Favorita</label>
+          <input type="color" name="userFavoritColor" id="favoritColor">
+
+     </fieldset>
        
        
        <button type="submit">enviar</button>
